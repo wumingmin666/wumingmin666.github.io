@@ -13,12 +13,12 @@
 <li>默认读者已经安装好node.js和git并且自己在github创建过仓库<span id="more"></span></li>
 </ul>
 <h2 id="git密钥连接github（做过的可省略）"><a href="#git密钥连接github（做过的可省略）" class="headerlink" title="git密钥连接github（做过的可省略）"></a>git密钥连接github（做过的可省略）</h2><ol start="0">
-<li>可以先到github主页-&gt;头像-&gt;setting-&gt;SSH and GPG keys查看是否已经设置过<br><img src="/2023/05/14/github-hexo-builds-a-blog-site/Snipaste_2023-05-14_10-49-34.png"></li>
+<li>可以先到github主页-&gt;头像-&gt;setting-&gt;SSH and GPG keys查看是否已经设置过<br><img src="/2023/05/14/github-hexo-builds-a-blog-site//05/14/github-hexo-builds-a-blog-site/Snipaste_2023-05-14_10-49-34.png"></li>
 <li>自己选择一个位置新建一个文件夹存放博客和hexo文件在该文件夹中创建一个文件夹命名为hexo，下文中的根目录指的都是hexo目录。</li>
 <li>在根目录右键选择git bash Here打开</li>
 <li>输入以下命令设置git全局配置（name为你github的用户名，email为github的邮箱）<br> <code>git --config global &quot;name&quot;</code><br> <code>git --config global &quot;email&quot;</code></li>
 <li>生成密钥<br> <code>h-keygen -t rsa -C &quot;Email&quot;</code></li>
-<li>查看密钥<br>打开&#x2F;c&#x2F;Users&#x2F;you&#x2F;.ssh&#x2F;id_rsa.pub.文件并复制内容<br>到github主页-&gt;头像-&gt;setting-&gt;SSH and GPG keys点击New SSH将复制内容粘贴到key中，title自己填<br><img src="/.io//Snipaste_2023-05-14_10-54-44.png"></li>
+<li>查看密钥<br>打开&#x2F;c&#x2F;Users&#x2F;you&#x2F;.ssh&#x2F;id_rsa.pub.文件并复制内容<br>到github主页-&gt;头像-&gt;setting-&gt;SSH and GPG keys点击New SSH将复制内容粘贴到key中，title自己填<br><img src="/2023/05/14/github-hexo-builds-a-blog-site//05/14/github-hexo-builds-a-blog-site/Snipaste_2023-05-14_10-54-44.png"></li>
 <li>查看是否连接成功<br>回到git bash Heres输入<br> <code>ssh -T git@github.com</code><br> 若出现你的用户名则连接成功</li>
 </ol>
 <h2 id="github创建仓库"><a href="#github创建仓库" class="headerlink" title="github创建仓库"></a>github创建仓库</h2><ol>
@@ -32,9 +32,9 @@
 <h2 id="配置hexo"><a href="#配置hexo" class="headerlink" title="配置hexo"></a>配置hexo</h2><ol>
 <li><p>依次输入以下命令<br> <code>hexo init</code><br> <code>npm install</code></p>
 </li>
-<li><p>配置config文件<br> <img src="/.io//05/14/github-hexo-builds-a-blog-site/Snipaste_2023-05-14_14-21-57.png"></p>
+<li><p>配置config文件<br> <img src="/2023/05/14/github-hexo-builds-a-blog-site//05/14/github-hexo-builds-a-blog-site/Snipaste_2023-05-14_14-21-57.png"></p>
 </li>
-<li><p>配置github仓库(先执行操作部署，如果不行再执行该步骤)<br> 原因：可能访问时默认的是main分支但是hexo部署到了master分支<br> 目标：对默认访问分支改为master<br> 步骤：<br> a、进入对应仓库-&gt;setting-&gt;General-&gt;修改Default branch<br> <img src="/.io//Snipaste_2023-05-14_14-28-02.png"><br> b、进入对应仓库-&gt;setting-&gt;Pages-修改branch<br> <img src="/.io//Snipaste_2023-05-14_14-27-07.png"></p>
+<li><p>配置github仓库(先执行操作部署，如果不行再执行该步骤)<br> 原因：可能访问时默认的是main分支但是hexo部署到了master分支<br> 目标：对默认访问分支改为master<br> 步骤：<br> a、进入对应仓库-&gt;setting-&gt;General-&gt;修改Default branch<br> <img src="/2023/05/14/github-hexo-builds-a-blog-site//05/14/github-hexo-builds-a-blog-site/Snipaste_2023-05-14_14-28-02.png"><br> b、进入对应仓库-&gt;setting-&gt;Pages-修改branch<br> <img src="/2023/05/14/github-hexo-builds-a-blog-site//05/14/github-hexo-builds-a-blog-site/Snipaste_2023-05-14_14-27-07.png"></p>
 </li>
 </ol>
 <h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><p>再操作前先安装一个插件，根目录进入git Bash Here输入命令<br>    <code>npm i hexo-deployer-git</code></p>
@@ -46,7 +46,7 @@
 </ol>
 <p>执行完1，2，3步后若无法查看到写的博客，可能的原因之一是将网页部署到了github的mater分支，可到github上查看，如果是的话，参考配置github仓库小节</p>
 <h2 id="其它问题"><a href="#其它问题" class="headerlink" title="其它问题"></a>其它问题</h2><ol>
-<li>博客图片加载问题<br><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/asset-folders">https://hexo.io/zh-cn/docs/asset-folders</a></li>
+<li>博客图片加载问题<br><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/asset-folders,%E6%B3%A8%E6%84%8F%E8%AF%84%E8%AE%BA%E5%8C%BA">https://hexo.io/zh-cn/docs/asset-folders,注意评论区</a></li>
 <li>博客网站主题<br><a target="_blank" rel="noopener" href="https://molunerfinn.com/hexo-theme-melody-doc/#features">https://molunerfinn.com/hexo-theme-melody-doc/#features</a></li>
 <li>更多操作可以看hexo官网文档<br><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">https://hexo.io/zh-cn/docs/</a></li>
 </ol>
